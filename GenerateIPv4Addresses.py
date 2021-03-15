@@ -3,7 +3,7 @@ def stripLeadingZeros(string):
         string = string[1:]
     return string
 
-def generateIPv4Adresses(amount):
+def generateIPv4Addresses(amount):
     import random
     examples = []
     for i in range(amount):
