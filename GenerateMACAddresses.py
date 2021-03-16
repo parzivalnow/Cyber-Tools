@@ -11,8 +11,8 @@ def generateMACaddresses(amount, eui48 = True, padding = True):
         for x in range(6+extendedLength):
             for y in range(2):
                 if padding == True:
-                    mac += pad(hex(random.randint(0,32))[2:], 2) + ":"
+                    mac += pad(hex(random.randint(0,255))[2:], 2) + ":"
                 else:
-                    mac += hex(random.randint(0,32))[2:] + ":"
+                    mac += hex(random.randint(0,255))[2:] + ":"
         macs.append(mac[:-1])
     return macs
