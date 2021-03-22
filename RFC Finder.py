@@ -26,23 +26,26 @@ class RFCsearch:
     
     def generateRFCs(self):
         if self.lowerNumber != None and self.upperNumber != None:
+            rfcList = []
             try:
-                rfcList = []
                 for i in range(self.lowerNumber, self.upperNumber + 1):
-                    if self.getRFC(i) != -1:
-                        rfcList.append(i)
+                    try:
+                        if self.getRFCScore(i) != -1:
+                            rfcList.append(i)
+                    except:
+                        continue
             except:
                 print("Failed during process execution.")
             return rfcList
         elif self.lowerNumber != None:
             try:
-                if self.getRFC(self.lowerNumber) != -1:
+                if self.getRFCScore(self.lowerNumber) != -1:
                     return self.lowerNumber
             except:
                 print("Failed during process execution.")
         return -1
         
-    def getRFC(self, number):
+    def getRFCScore(self, number):
         if number != None:
             try:
                 rfc_number = int(number)
