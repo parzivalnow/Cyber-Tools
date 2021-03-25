@@ -1,3 +1,9 @@
+
+###################################
+# Reference use
+# Amos, D. (2020). A Practical Introduction to Web Scraping in Python. https://realpython.com/python-web-scraping-practical-introduction/
+###################################
+
 import sys, urllib.request, re
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
