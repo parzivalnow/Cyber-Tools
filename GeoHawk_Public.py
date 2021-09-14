@@ -2,6 +2,7 @@
 
 import json
 import requests
+import sys
 
 class GeoHawk:
     def __init__(self, apiKey, ip_list, keys = ["ip", "country_name", "latitude", "longitude", "isp", "time_zone"]):
